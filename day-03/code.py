@@ -3,6 +3,7 @@ import fileinput
 lines = list(fileinput.input())
 
 gamma = ""
+epsilon = ""
 for x in range(0, len(lines[0])-1):
     countOnes = 0
     for y in range(0,len(lines)):
@@ -10,10 +11,11 @@ for x in range(0, len(lines[0])-1):
             countOnes += 1
     if countOnes >= len(lines)/2:
         gamma += "1"
+        epsilon += "0"
     else:
         gamma += "0"
-
-epsilon = gamma.translate(str.maketrans("01","10"))
+        epsilon += "1"
+      
 print(int(gamma,2) * int(epsilon, 2))
 
 # Part 2
