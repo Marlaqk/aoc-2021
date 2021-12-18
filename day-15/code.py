@@ -46,5 +46,5 @@ for (x, y), v in grid.items():
         nv = (v + a + b) % 9
         big_grid[(x + a * lx, y + b * ly)] = 9 if nv == 0 else nv
 
-print(find_shortest_path(grid, (0,0), max(grid, key=sum)))
-print(find_shortest_path(big_grid, (0,0), max(big_grid, key=sum)))
+print(find_shortest_path(grid, (0,0), max(grid)))
+print(find_shortest_path(big_grid, (0,0), max(big_grid)))
